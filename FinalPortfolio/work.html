@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hayden Kim Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/da8bed6a80.js" crossorigin="anonymous"></script>    <!--Link to Font Awesome for icons-->
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo_portfolio.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>        <!---closing icon for menu on mobile screens---->
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>    <!---menu icon for mobile screens---->
+        </nav>
+        <div class="header-text">
+            <h1>My recent <em>projects!</em></h1>
+            <p>Take a look at both my recent and past work!</p>
+        </div>
+    </div>
+</div>
+<!-------------------work_project-------------------->
+<div id="work_project">
+    <div class="full-img" id="fullImgBox">
+        <img src="images/gallery-1.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+     <div class="img-gallery">
+        <img src="images/gallery-1.jpg" onclick="openFullImg(this.src)">
+        <img src="images/gallery-2.jpg" onclick="openFullImg(this.src)">
+        <img src="images/gallery-3.jpg" onclick="openFullImg(this.src)">
+        <img src="images/gallery-4.jpg" onclick="openFullImg(this.src)">
+        <img src="images/gallery-5.jpg" onclick="openFullImg(this.src)">
+        <img src="images/gallery-6.jpg" onclick="openFullImg(this.src)">
+        <img src="images/gallery-7.jpg" onclick="openFullImg(this.src)">
+        <img src="images/gallery-8.jpg" onclick="openFullImg(this.src)">
+    </div>
+</div>
+
+<script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic){
+        fullImgBox.style.display = "flex";
+        fullImg.src = pic;
+    }
+
+    function closeFullImg(){
+        fullImgBox.style.display = "none";
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
